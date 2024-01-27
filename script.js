@@ -1,9 +1,12 @@
 //a constructor- is a special method for defining the prpoperty and methods of objects
+// Constructors can be used to create multiple objects...
+
 function Car(make, model, year, color){
    this.make = make,
    this.model = model,
    this.year = year,
    this.color = color
+   this.drive = function(){console.log(`you drive the ${this.model}`)}
 }
 
 const car1 = new Car("benz", "g-wagon", "2024", "white");
@@ -24,3 +27,7 @@ console.log(car3.make)
 console.log(car3.model)
 console.log(car3.year)
 console.log(car3.color)
+
+car1.drive();
+car2.drive();
+car3.drive();
